@@ -4,7 +4,8 @@ import media from 'styled-media-query'
 export const FooterWrapper = styled.div`
     margin-top: 3rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-
+    background: linear-gradient(-90deg, #7159c1, #ab59c1);
+    color: #fff;
     padding: calc(var(--space) * 1.3) var(--space);
 `
 
@@ -28,7 +29,7 @@ export const FooterContent = styled.div`
     flex-direction: column;
     align-items: center;
     width: auto;
-    
+
     ${media.greaterThan('medium')`
     flex-direction: row;
     justify-content: space-around;
@@ -42,6 +43,6 @@ export const FooterWatsapp = styled.div`
 `
 
 export const FooterAddress = styled.div`
-    display: flex;    
+    display: flex;
     color: #999;
 `
