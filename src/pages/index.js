@@ -8,6 +8,9 @@ import useTranslations from '../components/useTranslations';
 
 import * as S from '../components/ListWrapper/styled';
 
+//limite de itens na home 4
+//esta no fim da page
+
 const Index = ({ data: { allMarkdownRemark } }) => {
   // useTranslations is aware of the global context (and therefore also "locale")
   // so it'll automatically give back the right translations
@@ -65,13 +68,14 @@ const Index = ({ data: { allMarkdownRemark } }) => {
 
       <br />
 
-      <LocalizedLink to={`/blog/`}>{allPosts}</LocalizedLink>
+      <LocalizedLink to={`/blog/`}> &lt;&lt;{allPosts} &gt;&gt;</LocalizedLink>
     </div>
   );
 };
 
 export default Index;
 
+//limite de itens na home 2
 export const query = graphql`
   query Index($locale: String!, $dateFormat: String!, ) {
     allMarkdownRemark(
@@ -80,7 +84,7 @@ export const query = graphql`
         fileAbsolutePath: {regex: "/(blog)\/.*\\.md$/"}
       }
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 2
+      limit: 4
     ) {
       edges {
         node {

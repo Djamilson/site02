@@ -2,13 +2,14 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 
 export const ButtonHamburger = styled.button`
-  background: transparent;
-  display: inline-block;
   width: 50px;
   height: 50px;
+  border-radius: 3px;
   border: none;
   position: absolute;
-  border-radius: 3px;
+  background: transparent;
+  display: inline-block;
+ 
   top: var(--space-sm);
   left: var(--space-sm);
   ${media.greaterThan('medium')`
@@ -16,6 +17,7 @@ export const ButtonHamburger = styled.button`
   `}
 
   &.active {
+  
     span {
       background: transparent;
       &:before,
@@ -42,7 +44,7 @@ export const ButtonHamburger = styled.button`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    
     &:before,
     &:after {
       content: '';
@@ -54,6 +56,7 @@ export const ButtonHamburger = styled.button`
       position: absolute;
       left: 0;
       transition: 0.3s;
+
     }
 
     &:before {

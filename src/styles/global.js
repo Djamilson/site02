@@ -1,5 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import media from 'styled-media-query';
+import { createGlobalStyle } from 'styled-components'
+import media from 'styled-media-query'
+import { darken } from 'polished'
 
 const GlobalStyles = createGlobalStyle`
  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
@@ -34,10 +35,13 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     line-height: 1;
+    -webkit-font-smoothing: antialiased;
   }
+  
   ol, ul {
     list-style: none;
   }
+  button{ cursor: pointer;}
   blockquote, q {
     quotes: none;
   }
@@ -71,11 +75,19 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    color: var(--primaryColor)
+    color: var(--primaryColor);
+    text-decoration: none;
+    
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-5px);
+      transition: all 0.2s;
+    }
   }
 
+
   :root { 
-    --gray-extra-light: #108C44; 
+    --gray-extra-light: ${darken(0.08, '#108C44')}; 
     --gray-extra-moderna: #eaeaea; 
     --gray-light: #747d8d;  
     --gray: #475060;
@@ -110,5 +122,5 @@ const GlobalStyles = createGlobalStyle`
     --space-lg: 3rem;
 
   }
-`;
-export default GlobalStyles;
+`
+export default GlobalStyles
