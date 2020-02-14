@@ -30,9 +30,6 @@ $ gatsby new gatsby-multilanguage-site https://github.com/diogorodrigues/iceberg
 
 **With git clone**:
 ```
-$ git clone https://github.com/diogorodrigues/iceberg-gatsby-multilang.git your-project-name # Clone the project
-
-cd your-project-name
 
 rm -rf .git
 yarn install # or npm install

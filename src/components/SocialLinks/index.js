@@ -1,10 +1,5 @@
 import React from 'react'
 
-import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
-import { FacebookCircle } from 'styled-icons/boxicons-logos/FacebookCircle'
-import { Instagram } from 'styled-icons/boxicons-logos/Instagram'
-import { Github } from 'styled-icons/boxicons-logos/Github'
-
 import * as S from './styled'
 
 const SocialLinks = () => {
@@ -16,7 +11,7 @@ const SocialLinks = () => {
                     title="Instagram"
                     target="_blank"
                 >
-                    <Instagram />
+                    <S.WhiteInstagram />                    
                 </S.SocialLinksLink>
             </S.SocialLinksItem>
             <S.SocialLinksItem>
@@ -25,7 +20,7 @@ const SocialLinks = () => {
                     title="Twitter"
                     target="_blank"
                 >
-                    <Twitter />
+                    <S.WhiteTwitter />
                 </S.SocialLinksLink>
             </S.SocialLinksItem>
             <S.SocialLinksItem>
@@ -34,7 +29,7 @@ const SocialLinks = () => {
                     title="Facebook"
                     target="_blank"
                 >
-                    <FacebookCircle />
+                    <S.WhiteFacebookCircle />
                 </S.SocialLinksLink>
             </S.SocialLinksItem>
         </S.SocialLinksList>
