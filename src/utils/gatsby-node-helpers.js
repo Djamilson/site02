@@ -9,8 +9,6 @@ exports.localizedSlug = ({ isDefault, locale, slug, isPage }) => {
   return isDefault ? `/blog/${slug}` : `/${locale}/blog/${slug}`;
 };
 
-// From lodash:
-// https://github.com/lodash/lodash/blob/750067f42d3aa5f927604ece2c6df0ff2b2e9d72/findKey.js
 exports.findKey = (object, predicate) => {
   let result;
   if (object == null) {

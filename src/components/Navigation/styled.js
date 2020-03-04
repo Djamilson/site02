@@ -74,6 +74,7 @@ export const NavigationButton = styled(Link)`
   text-decoration: none;
   font-weight: bold;
   text-align: center;
+  
   ${media.greaterThan('medium')`
     margin-left: var(--space-lg);
   `}
