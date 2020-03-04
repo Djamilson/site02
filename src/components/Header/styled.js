@@ -6,6 +6,7 @@ export const HeaderWrapper = styled.div`
     background-color: var(--bg-light);
     ${media.greaterThan('large')`
     margin-bottom: var(--space);
+    
   `}
 `
 
@@ -34,6 +35,13 @@ export const LogoLink = styled(LocalizedLink)`
 
 export const NavMenu = styled.div`
     width: 100%;
+
+    margin-bottom: 10px;
+    ${media.greaterThan('912px')`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  `}
     ${media.greaterThan('medium')`
     margin-left: auto;
     width: auto;
@@ -43,16 +51,18 @@ export const NavMenu = styled.div`
 export const NavWatsappPhone = styled.div`
     display: flex;
     justify-content: center;
-    margin-left: var(--space);
+
     width: 280px;
     background: #fff;
     height: 140px;
     border-radius: 5px;
 
     ${media.greaterThan('medium')`
+
+    
     flex-direction: row;
     height: 120px;
-    margin-right: 2px;
+    margin-left: 52px;
     width: 350px;
   `}
 `
